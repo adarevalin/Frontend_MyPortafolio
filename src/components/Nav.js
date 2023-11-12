@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -11,8 +12,8 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Post</Nav.Link>
-            <Nav.Link href="#pricing">Intereses</Nav.Link>
+            <Nav.Link><Link to={"/"}>Publicaciones</Link></Nav.Link>
+            <Nav.Link><Link to={"/interesting"}>Interesting</Link></Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Estudios</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Articulos</NavDropdown.Item>

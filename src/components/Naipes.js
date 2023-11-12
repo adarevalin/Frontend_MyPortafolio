@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function Naipes() {
+function Naipes(props) {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://purina.com.pe/sites/default/files/styles/webp/public/2022-10/Que_debes_saber_antes_de_adoptar_un_gatito.jpg.webp?itok=N2sS0lfp" />
@@ -11,7 +11,7 @@ function Naipes() {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary" href={props.Href}>{props.title_B}</Button>
       </Card.Body>
     </Card>
   );

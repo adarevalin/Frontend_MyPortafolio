@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.custom-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilos generales para el footer */
+.astro-SZ7XMLTE.footer {
+    background-color: #131516;
+    padding: 30px 0;
+    color: #e1e2eb;
+  }
+  
+  /* Estilos para el logo en el lado izquierdo */
+  .astro-SZ7XMLTE.footer .icon-flipcat img {
+    max-width: 100%;
+  }
+  
+  /* Estilos para la sección de redes sociales en el centro */
+  .astro-SZ7XMLTE.footer .social-media {
+    text-align: center;
+  }
+  
+  .astro-SZ7XMLTE.footer .social-media .footer-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .astro-SZ7XMLTE.footer .social-media .media-row {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .astro-SZ7XMLTE.footer .social-media .media-icon {
+    margin: 0 10px;
+  }
+  
+  /* Estilos para el chat virtual en el lado derecho */
+  .astro-SZ7XMLTE.footer .chat-virtual {
+    text-align: center;
+  }
+  
+  /* Estilos para el texto de copyright y otros elementos adicionales */
+  .astro-SZ7XMLTE.footer .after-footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #6e6f81;
+  }
+  

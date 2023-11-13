@@ -1,13 +1,13 @@
 import React from 'react';
-
+import Cite from './Cite'
 
 
 function Interesting () {
     return (
         <>
-        <h1>Nueva pagina</h1>
+            <Cite />
         </>
-    )
+    );
 }
 
 export default Interesting;

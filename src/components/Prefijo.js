@@ -1,16 +1,18 @@
 import React from "react";
-import '../style.css'
+import '../style.css';
+import { Container, Image } from 'react-bootstrap';
 
 function Prefijo () {
     return(
         <>
-            <div className="general">
+
+            <Container className="general">
+                <div className="DivImagen">
+                    <Image xs={6} md={4} alt="Mi foto" src="../img/yo.jpg" className="imgYo" roundedCircle/>
+                </div>
                 <div className="DivTitulo">
                     <h1 className="Titulo">Andrés David Arévalo Rosero</h1>
-                    <h3 className="subTitulo">Ing. Electronico</h3>
-                </div>
-                <div className="DivImagen">
-                    <img alt="Mi foto" src="../img/yo.jpg" className="imgYo"/>
+                    <h3 className="subTitulo">Ing. Electrónico</h3>
                 </div>
                 <div className="DivDescrip">
                     <p className="Description">
@@ -22,7 +24,7 @@ function Prefijo () {
                         lo largo de mi carrera. Mi enfoque en la excelencia y la dedicación me ha permitido obtener los mejores resultados en estas áreas.
                     </p>
                 </div>
-            </div>
+            </Container>
         </>
     )
 }

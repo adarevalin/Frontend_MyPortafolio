@@ -2,83 +2,243 @@
     margin: 0;
     padding: 0;
 }
-.custom-link {
-    text-decoration: none;
-    color: white;
-}
 
-.imgFooter {
-  width:  25%;
-  height: auto;
-}
+@media screen and (max-width: 425px) {
 
-/* Estilos generales para el footer */
-.astro-SZ7XMLTE.footer {
-    background-color: #131516;
-    padding: 15px;
-    color: #e1e2eb;
-    margin: auto;
-  }
-  
-  /* Estilos para el logo en el lado izquierdo */
-  .astro-SZ7XMLTE.footer .icon-flipcat {
-    display: flex;
-    padding: 25px 0 0 0;
-    justify-content: center;
-  }
- 
-  .astro-SZ7XMLTE.footer .icon {
-    padding: 0;
-    margin: 10px;
+  .custom-link {
+      text-decoration: none;
+      color: white;
   }
 
-  .imgIcons {
-    width:  70%;
+  .imgFooter {
+    width:  18%;
     height: auto;
   }
 
-  /* Estilos para la sección de redes sociales en el centro */
-  /*siguenos en nuestras redes*/
-  .astro-SZ7XMLTE.footer .social-media {
-    text-align: center;
+  /* Estilos generales para el footer */
+  .astro-SZ7XMLTE.footer {
+      background-color: #131516;
+      padding: 15px 0 15px;
+      color: #e1e2eb;
+      margin: auto;
+    }
+    
+    /* Estilos para el logo en el lado izquierdo */
+    .astro-SZ7XMLTE.footer .icon-flipcat {
+      display: flex;
+      padding: 10px 0 10px 0;
+      justify-content: center;
+    }
+  
+    .astro-SZ7XMLTE.footer .icon {
+      padding: 0;
+      margin: 10px;
+    }
+
+    .imgIcons {
+      width:  60%;
+      height: auto;
+    }
+
+    /* Estilos para la sección de redes sociales en el centro */
+    /*siguenos en nuestras redes*/
+    .astro-SZ7XMLTE.footer .social-media {
+      text-align: center;
+      padding: 15px;
+    }
+
+    /*titulos*/
+    .astro-SZ7XMLTE.footer .social-media .footer-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    
+    /*redes sociales */
+    .astro-SZ7XMLTE.footer .social-media .media-row {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    
+    .astro-SZ7XMLTE.footer .social-media .media-icon {
+      margin: 0 10px;
+    }
+    
+
+    /* Estilos para el chat virtual en el lado derecho */
+    .astro-SZ7XMLTE.footer .chat-virtual {
+      text-align: center;
+    }
+    
+    /* Estilos para el texto de copyright y otros elementos adicionales */
+    .astro-SZ7XMLTE.footer .after-footer {
+      margin-top: 10px;
+      padding: 15px 10px 5px 10px;
+      text-align: center;
+      color: #6e6f81;
+    }
+  
+}
+
+@media screen and (min-width: 426px) and (max-width: 575px) {
+
+  .custom-link {
+      text-decoration: none;
+      color: white;
   }
 
-  /*titulos*/
-  .astro-SZ7XMLTE.footer .social-media .footer-title {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+  .imgFooter {
+    width: 18%;
+    height: auto;
   }
-  
-  /*redes sociales */
-  .astro-SZ7XMLTE.footer .social-media .media-row {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .astro-SZ7XMLTE.footer .social-media .media-icon {
-    margin: 0 10px;
-  }
-  
 
-  /* Estilos para el chat virtual en el lado derecho */
-  .astro-SZ7XMLTE.footer .chat-virtual {
-    text-align: center;
-  }
+  /* Estilos generales para el footer */
+  .astro-SZ7XMLTE.footer {
+      background-color: #131516;
+      padding: 15px 0 15px;
+      color: #e1e2eb;
+      margin: auto;
+    }
+    
+    /* Estilos para el logo en el lado izquierdo */
+    .astro-SZ7XMLTE.footer .icon-flipcat {
+      display: flex;
+      padding: 10px 0 10px 0;
+      justify-content: center;
+    }
   
-  /* Estilos para el texto de copyright y otros elementos adicionales */
-  .astro-SZ7XMLTE.footer .after-footer {
-    margin-top: 15px;
-    padding: 5px 10px 5px 10px;
-    text-align: center;
-    color: #6e6f81;
-  }
-  
+    .astro-SZ7XMLTE.footer .icon {
+      padding: 0;
+      margin: 10px;
+    }
 
+    .imgIcons {
+      width:  60%;
+      height: auto;
+    }
+
+    /* Estilos para la sección de redes sociales en el centro */
+    /*siguenos en nuestras redes*/
+    .astro-SZ7XMLTE.footer .social-media {
+      text-align: center;
+      padding: 15px;
+    }
+
+    /*titulos*/
+    .astro-SZ7XMLTE.footer .social-media .footer-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    
+    /*redes sociales */
+    .astro-SZ7XMLTE.footer .social-media .media-row {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    
+    .astro-SZ7XMLTE.footer .social-media .media-icon {
+      margin: 0 10px;
+    }
+    
+
+    /* Estilos para el chat virtual en el lado derecho */
+    .astro-SZ7XMLTE.footer .chat-virtual {
+      text-align: center;
+    }
+    
+    /* Estilos para el texto de copyright y otros elementos adicionales */
+    .astro-SZ7XMLTE.footer .after-footer {
+      margin-top: 10px;
+      padding: 15px 10px 5px 10px;
+      text-align: center;
+      color: #6e6f81;
+    }
+  
+}
+
+@media screen and (min-width: 576px) and (max-width: 1700px) {
+
+  .custom-link {
+      text-decoration: none;
+      color: white;
+  }
+
+  .imgFooter {
+    width: 25%;
+    height: auto;
+  }
+
+  /* Estilos generales para el footer */
+  .astro-SZ7XMLTE.footer {
+      background-color: #131516;
+      padding: 15px 0 15px;
+      color: #e1e2eb;
+      margin: auto;
+    }
+    
+    /* Estilos para el logo en el lado izquierdo */
+    .astro-SZ7XMLTE.footer .icon-flipcat {
+      display: flex;
+      padding: 50px 0 50px 0;
+      justify-content: center;
+    }
+  
+    .astro-SZ7XMLTE.footer .icon {
+      padding: 0;
+      margin: 10px;
+    }
+
+    .imgIcons {
+      width:  60%;
+      height: auto;
+    }
+
+    /* Estilos para la sección de redes sociales en el centro */
+    /*siguenos en nuestras redes*/
+    .astro-SZ7XMLTE.footer .social-media {
+      text-align: center;
+      padding: 15px;
+    }
+
+    /*titulos*/
+    .astro-SZ7XMLTE.footer .social-media .footer-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    
+    /*redes sociales */
+    .astro-SZ7XMLTE.footer .social-media .media-row {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    
+    .astro-SZ7XMLTE.footer .social-media .media-icon {
+      margin: 0 10px;
+    }
+    
+
+    /* Estilos para el chat virtual en el lado derecho */
+    .astro-SZ7XMLTE.footer .chat-virtual {
+      text-align: center;
+    }
+    
+    /* Estilos para el texto de copyright y otros elementos adicionales */
+    .astro-SZ7XMLTE.footer .after-footer {
+      margin-top: 10px;
+      padding: 15px 10px 5px 10px;
+      text-align: center;
+      color: #6e6f81;
+    }
+  
+}
   /* ESTILOS PARA LA PAGINA ACERCA DE MI*/
 
 .general {
-  background-color: aquamarine;
   padding-top: 100px;
   position: relative;
 }
@@ -91,7 +251,6 @@
 }
 
 .DivTitulo {
-  background-color: aquamarine;
   margin: 5% 10% 5% 10%;
 }
 .general .subTitulo {
@@ -108,17 +267,19 @@
   font-size: 1.1rem;
 }
 .DivDescrip {
-  background-color: aquamarine; 
-  margin: 5% 10% 5% 10%;
+  margin: 5% 10% 0 10%;
+  font-family:Arial, Helvetica, sans-serif ;
+  font-size: 1.1em;
+
  }
 
 .DivImagen {
   display: flex;
   justify-content: center;
+  
 
 }
 .imgYo {
-  width: 50%;
+  width: 25%;
   height: auto;
-  border: solid;
 }

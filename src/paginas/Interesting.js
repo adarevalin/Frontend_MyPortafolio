@@ -1,5 +1,5 @@
 import React from 'react';
-import Cite from './Cite'
+import Cite from '../components/Cite'
 
 
 function Interesting () {

@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "./Carrusel";
+import Slider from "../components/Carrusel";
 
 function Article () {
     return (

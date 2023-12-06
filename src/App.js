@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Fragment } from 'react';
 import NavBar from './components/Nav';
 import Footer from './components/Footer';
-import Home from './components/Home';
-import Interesting from './components/Interesting';
-import Studios from './components/Studios';
-import Article from './components/Article';
-import Certificate from './components/Certificate';
-import Curriculum from './components/Curriculum';
-import Prefijo from './components/Prefijo'
+import Home from './paginas/Home';
+import Interesting from './paginas/Interesting';
+import Studios from './paginas/Studios';
+import Article from './paginas/Article';
+import Certificate from './paginas/Certificate';
+import Curriculum from './paginas/Curriculum';
+import Prefijo from './paginas/Prefijo';
+import Estruct from './components/Estruct';
 
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.css';
@@ -27,6 +28,7 @@ function App() {
           <Route path='/certificate' element={<Certificate/>} />
           <Route path='/curriculum' element={<Curriculum/>} />
           <Route path='/prefijo' element={<Prefijo/>} />
+          <Route path='/Estruct' element={<Estruct />} />
         </Routes>
         <Footer/>
       </Fragment>

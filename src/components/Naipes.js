@@ -1,17 +1,15 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 function Naipes(props) {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://purina.com.pe/sites/default/files/styles/webp/public/2022-10/Que_debes_saber_antes_de_adoptar_un_gatito.jpg.webp?itok=N2sS0lfp" />
+    <Card style={{ width: '15rem' }}>
+      <Card.Img variant="top" src={props.Src} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary" href={props.Href}>{props.title_B}</Button>
+        <Card.Title>{props.Title}</Card.Title>
+        <Card.Text>{props.P}</Card.Text>
+        <Button variant="primary" as={Link} to={'/Estruct'}> {props.Title_B}</Button>
       </Card.Body>
     </Card>
   );

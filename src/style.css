@@ -242,6 +242,9 @@
   padding-top: 100px;
   position: relative;
 }
+.generalStudios {
+  padding-bottom: 10px;
+}
 .general .Titulo {
   text-align: center;
   padding: 7px;

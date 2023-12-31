@@ -240,11 +240,10 @@
 
 .general {
   padding-top: 100px;
-  position: relative;
+  padding-bottom: 40px;
+
 }
-.generalStudios {
-  padding-bottom: 10px;
-}
+
 .general .Titulo {
   text-align: center;
   padding: 7px;
@@ -285,4 +284,10 @@
 .imgYo {
   width: 25%;
   height: auto;
+}
+
+.generalElement {
+ 
+  padding-top: 100px;
+  padding-bottom: 40px;
 }

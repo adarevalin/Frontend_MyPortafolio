@@ -1,6 +1,4 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 
 function Naipes(props) {
   return (
@@ -9,7 +7,6 @@ function Naipes(props) {
       <Card.Body>
         <Card.Title>{props.Title}</Card.Title>
         <Card.Text>{props.P}</Card.Text>
-        <Button variant="primary" as={Link} to={'/Estruct'}> {props.Title_B}</Button>
       </Card.Body>
     </Card>
   );

@@ -1,11 +1,10 @@
 import React from 'react';
-import Cite from '../components/Cite'
-
+import FetchNotice from '../methods/FetchNotice';
 
 function Interesting () {
     return (
         <>
-            <Cite />
+            <FetchNotice/>
         </>
     );
 }

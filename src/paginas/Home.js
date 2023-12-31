@@ -1,16 +1,19 @@
 import React from 'react';
 import Slider from '../components/Carrusel'
 import Cite from '../components/Cite'
-import Grid from '../components/grid'
+import FetchGet from '../methods/FetchGet';
+import { Container} from 'react-bootstrap';
 
 
 
 function Home () {
     return (
         <>
-        <Slider Src='../img/audifono.jpg' Alt="imagen de gatito" Title="Esto es el titulo" P="esto es el parrafo donde hay una descripcion"/>
+        <Slider url="http://localhost:8000/api/portafolio/intereses/"/>
         <Cite/>
-        <Grid/>
+        <Container>    
+                <FetchGet url="http://localhost:8000/api/portafolio/articulo"/>  
+        </Container>
         </>
     )
 }

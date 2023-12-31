@@ -1,11 +1,14 @@
 import React from "react";
-import Grid from "../components/grid";
-
+import FetchGet from "../methods/FetchGet";
+import '../style.css';
+import { Container} from 'react-bootstrap';
 
 function Certificate () {
     return(
         <>
-            <Grid/>
+        <Container>
+            <FetchGet url="http://localhost:8000/api/portafolio/certificados"/>
+        </Container>
         </>
     )
 }

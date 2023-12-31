@@ -16,8 +16,6 @@ function NavBar() {
             <Nav.Link><Link to={"/"} className='custom-link'>Publicaciones</Link></Nav.Link>
             <Nav.Link><Link to={"/interesting"} className='custom-link'>Intereses</Link></Nav.Link>
             <NavDropdown title="Desplegable" id="collasible-nav-dropdown">
-              <NavDropdown.Item><Link to={"/Studios"} className='custom-link'>Estudios</Link></NavDropdown.Item>
-              <NavDropdown.Divider />
               <NavDropdown.Item> <Link to={"/article"} className='custom-link'>Articulos</Link></NavDropdown.Item>
               <NavDropdown.Item> <Link to={"/certificate"} className='custom-link'>Certificados</Link></NavDropdown.Item>
             </NavDropdown>

@@ -1,9 +1,9 @@
-
 import React from "react";
 import Accordion from 'react-bootstrap/Accordion';
 import '../style.css';
 import '../components/styles/styleCurriculum.css'
 import { Container} from 'react-bootstrap';
+import FetchDate from '../methods/FetchDate';
 
 function Curriculum () {
     return (
@@ -26,11 +26,7 @@ function Curriculum () {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header><span className="items_prin">Datos personales</span></Accordion.Header>
                     <Accordion.Body>
-                        <li><b>Fecha de nacimiento:</b> 15 de diciembre de 1999 </li>
-                        <li><b>Cédula de ciudadanía:</b> 1083931096 </li>
-                        <li><b>Nacionalidad:</b> Colombiano </li>
-                        <li><b>Estado civil:</b> Soltero </li>
-                        <li><b>Correo electrónico:</b> andres.arevalo@unipamplona.edu.co </li>
+                        <FetchDate url="http://localhost:8000/api/portafolio/date/"/>
                     </Accordion.Body>
                 </Accordion.Item>
 
@@ -38,14 +34,14 @@ function Curriculum () {
                 <Accordion.Item eventKey="1">
                     <Accordion.Header><span className="items_prin">Educación Profesional</span></Accordion.Header>
                     <Accordion.Body>
-                        alimentado por base de datos
+                        <FetchDate url="http://localhost:8000/api/portafolio/studios/"/>
                     </Accordion.Body>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="2">
                     <Accordion.Header><span className="items_prin">Formación Complementaria</span></Accordion.Header>
                     <Accordion.Body>
-                        alimentado por base de datos
+                        <FetchDate url="http://localhost:8000/api/portafolio/certificados/"/>
                     </Accordion.Body>
                 </Accordion.Item>
 
@@ -59,7 +55,7 @@ function Curriculum () {
                 <Accordion.Item eventKey="4">
                     <Accordion.Header><span className="items_prin">Proyectos Profesionales</span></Accordion.Header>
                     <Accordion.Body>
-                        alimetado por base de datos
+                        <FetchDate url="http://localhost:8000/api/portafolio/articulo/"/>
                     </Accordion.Body>
                 </Accordion.Item>
 

@@ -1,10 +1,17 @@
 import React from "react";
-import Slider from "../components/Carrusel";
+import { Container} from 'react-bootstrap';
+import FetchGet from "../methods/FetchGet";
+import '../style.css';
+
+
 
 function Article () {
+
     return (
-        <>
-            <Slider/>
+        <> 
+        <Container>    
+                <FetchGet url="http://localhost:8000/api/portafolio/articulo"/>  
+        </Container>
         </>
     );
 }

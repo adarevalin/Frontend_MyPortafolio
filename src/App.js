@@ -15,8 +15,14 @@ import PageCertificado from './paginas/PageCertificado';
 
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    // Elimina el token al cargar la página
+    localStorage.removeItem("token");
+  }, []); // El segundo parámetro del useEffect asegura que esto solo se ejecute una vez al cargar la página
+
   return (
     <Router>
       <Fragment>

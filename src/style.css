@@ -291,3 +291,17 @@
   padding-top: 100px;
   padding-bottom: 40px;
 }
+
+.iconEdit {
+  display: inline-block;
+  width: 5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.imgEdit {
+  opacity: 0.7; /* Ajusta el valor para la transparencia deseada (1 es completamente opaco, 0 es completamente transparente) */
+  transition: opacity 0.3s ease; /* Agrega una transición para suavizar el cambio de opacidad */
+  width: 50%;
+  height: auto;
+}

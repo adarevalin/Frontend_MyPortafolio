@@ -8,7 +8,7 @@ function PageRedaccion () {
 
     return(
         <>
-        <Container className='general generalStudios'>
+        <Container>
             <EstructRedaccion Id={id} url={"http://localhost:8000/api/portafolio/redaccion"}/>
         </Container>
         </>

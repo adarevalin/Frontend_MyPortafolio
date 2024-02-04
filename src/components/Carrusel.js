@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import GetDate from '../methods/funtion/GetDate';
 import Carousel from 'react-bootstrap/Carousel';
+import TruncateText from './TruncateText'; // Importa el componente TruncateText
+import "./styles/carrusel.css"
 
 function Slider({ url }) {
   const [data, setData] = useState([]);
@@ -40,18 +42,19 @@ function Slider({ url }) {
       {data.map((item) => (
         <Carousel.Item key={item.id}>
           <img
-            className="d-block w-100"
-            src={item.imagen}
+            className="ImagenCarrusel d-block w-100"
+            src={item.img}
             alt={item.nombre}
-            style={{ height: '500px' }}
           />
           <Carousel.Caption>
             <h3>{item.nombre}</h3>
-            <p>{item.texto}</p>
-            <a href={item.pag} target="_blank" rel="noopener noreferrer">
+            {/* Utiliza el componente TruncateText para truncar el texto */}
+            <div>
+              <TruncateText text={item.texto} maxLength={50} />
+            </div>
+            <a href={item.pag} target="_blank" rel="noopener noreferrer" className='RefCarrusel'>
               Ingrese aquí
             </a>
-            
           </Carousel.Caption>
         </Carousel.Item>
       ))}
@@ -60,4 +63,5 @@ function Slider({ url }) {
 }
 
 export default Slider;
+
 

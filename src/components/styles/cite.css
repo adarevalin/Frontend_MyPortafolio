@@ -1,0 +1,19 @@
+.Cita {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1% 1% 1%;
+    opacity: 1;
+}
+
+.Cita .Cite {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2% 5% 1% 5%;
+    border-radius: 15%;
+    font-family: Helvetica;
+    color: azure;
+}
+
+.Cita .Cite h2 {
+    font-size: 2.5rem;
+}

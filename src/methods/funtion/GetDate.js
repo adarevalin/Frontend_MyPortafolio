@@ -6,6 +6,7 @@ async function GetDate(url) {
         console.log('Todo bien');
       } else {
         console.log('Respuesta de red OK pero respuesta de HTTP no OK');
+        
       }
       return datos
       

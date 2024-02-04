@@ -1,0 +1,26 @@
+.principal .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.principal .container .col .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+}
+.principal h1 {
+    font-size: 3.5rem;
+}
+
+.principal h3 {
+    font-size: 2rem;
+}
+
+.principal p {
+    font-size: 1.5rem;
+}
+.principal img {
+    width: 70%;
+}

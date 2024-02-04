@@ -1,7 +1,15 @@
+const token =  localStorage.getItem('token');
+
 async function eliminarDato(url, id) {
   try {
     const respuesta = await fetch(`${url}${id}`, {
       method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      credentials: 'include',
+      Authorization: 'include',
     });
 
     if (respuesta.ok) {

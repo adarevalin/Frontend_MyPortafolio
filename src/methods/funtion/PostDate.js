@@ -1,10 +1,15 @@
+const token =  localStorage.getItem('token');
+
 async function crearNuevoDato(url, nuevoDato) {
     try {
       const respuesta = await fetch(url, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
         },
+        credentials: 'include',
+        Authorization: 'include',
         body: JSON.stringify(nuevoDato),
       });
       const resultado = await respuesta.json();

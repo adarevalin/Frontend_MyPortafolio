@@ -13,6 +13,8 @@
     margin: 20px auto; /* Centra la tabla y agrega margen */
     border-collapse: collapse; /* Combina los bordes de las celdas */
     width: 80%; /* Establece el ancho de la tabla */
+    overflow: hidden;
+    word-wrap: break-word;
   }
   
   .styled-table td, .styled-table th {
@@ -100,14 +102,36 @@ form input {
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
-  padding: 70px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  width: 70%;
+  margin: auto;
+}
+.generalNotice table thead tr th {
+  font-size: 1.2rem;
+  background-color: #00000088;
 }
 
+.generalNotice table tbody {
+  background-color: #0000001A;
+}
 .generalNotice h1 {
   max-width: 100%;
-  font-size: 30px;
+  font-size: 2.5rem;
 }
+
 
 .joke-container {
   font-size: 1em sans-serif;
+}
+
+.ClassBEdit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2%;
+}
+
+.ClassBEdit button {
+  margin: 1%;
 }

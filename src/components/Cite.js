@@ -1,14 +1,13 @@
 import FetchJoker from "../methods/FetchJoker";
-
+import "./styles/cite.css"
 function Cite () {
 
-return <div class="card" style={{'paddingTop':'2%'}}>
-        <div class="card-header" style={{'padding':'2%', 'font-size':'2em'}}>
-            Joker
-        </div>
-        <div class="card-body" style={{'padding':'2%'}}>
+return <div className="Cita">
+        <div class="card-body" className="Cite">
+            <div class="card-header">
+                <h2>Humor</h2>
+            </div>
             <blockquote class="blockquote mb-0">
-                
             <FetchJoker />
 
             <footer class="blockquote-footer">Chistes generados por API <cite title="Source Title">JokerAPI</cite></footer>

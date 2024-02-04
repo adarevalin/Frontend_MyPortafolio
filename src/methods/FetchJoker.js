@@ -7,7 +7,7 @@ async function GetJoker() {
       const respuesta = await fetch("http://localhost:8000/api/portafolio/chistes");
       const datos = await respuesta.json();
       if (respuesta.ok) {
-        console.log('Todo bien');
+        console.log('Todo bien Joker');
       } else {
         console.log('Respuesta de red OK pero respuesta de HTTP no OK');
       }

@@ -45,7 +45,7 @@ function FetchGet({ url }) {
   }
 
   const Url = location.pathname;
-  console.log(Url)
+  
   const renderGrids = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -57,6 +57,7 @@ function FetchGet({ url }) {
       <Row>
         {naipesToDisplay.map((item) => {
           const id = item.id || "No contiene un id";
+          const img = item.img|| null
           const title = item.curso || item.nombre;
           const Institution = `${item.institucion || item.publicado}`;
           
@@ -66,7 +67,7 @@ function FetchGet({ url }) {
               return (
                 <Col key={id}>
                   <Link to={`/Page/${id}/${title}`} className='custom-link'>
-                    <Grid  naipes={data} Src="../img/carta-a.png" Title={title} P={Institution} />
+                    <Grid  naipes={data} Src={img} Title={title} P={Institution} />
                   </Link>
                 </Col>
               );
@@ -74,7 +75,7 @@ function FetchGet({ url }) {
               return (
                 <Col key={id}>
                   <Link to={`/PageC/${id}/${title}`} className='custom-link'>
-                    <Grid naipes={data} Src="../img/carta-a.png" Title={title} P={Institution} />
+                    <Grid naipes={data} Src={img} Title={title} P={Institution} />
                   </Link>
                 </Col>
               );

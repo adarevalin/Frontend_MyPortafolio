@@ -8,7 +8,7 @@ import handleSubmit from "./funtion/handleSubmit";
 import CustomPagination from "../components/CustomPagination";
 
 // Define el componente funcional FetchDate y recibe una prop llamada 'url'.
-function FetchDate({url}) {
+function FetchDate({ url, isEditing, onSave, onInputChange, editedData }) {
     // Define los estados del componente utilizando el hook useState.
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -24,14 +24,17 @@ function FetchDate({url}) {
           try {
             // Realiza una solicitud para obtener datos utilizando la función GetDate.
             const response = await GetDate(url);
+            const sortedData = response.sort((a, b) => a.id - b.id);
             // Actualiza el estado 'data' con los datos obtenidos.
-            setData(response);
+            setData(sortedData);
           } catch (error) {
             // Actualiza el estado 'error' en caso de un error durante la solicitud.
             setError(error);
+            return <div>Error: {error.message}</div>;
           } finally {
             // Establece isLoading en false después de completar la solicitud.
             setIsLoading(false);
+            return <div>Loading...</div>;
           }
         };
         
@@ -44,12 +47,13 @@ function FetchDate({url}) {
       setElementPage(newPage);
     };
 
+
     // Maneja el cambio en los campos de entrada del formulario.
     const handleInputChange = (e) => {
       const { name, value } = e.target;
       setNuevoDato((prevData) => ({ ...prevData, [name]: value }));
     };
-    
+
     // Maneja el envío del formulario.
     const handleFormSubmit = async (e) => {
       e.preventDefault();
@@ -99,25 +103,44 @@ function FetchDate({url}) {
       const endIndex = startIndex + itemsPerPage;
       const naipesToDisplay = data.slice(startIndex, endIndex);
 
-      // Renderiza el componente final.
       return (
-        <div className="App">
+      <div className="App">
         {data && (
           <table className="styled-table">
             <tbody>
               {naipesToDisplay.map((item, index) => (
                 <tr key={index}>
-                  {Object.values(item).map((value, index) => (
-                    <td key={index}><strong>{value}</strong></td>
+                  {/* Renderizar datos según si estamos en modo de edición o no */}
+                  {Object.entries(item).map(([key, value], index) => (
+                    key !== 'img' && key  !== 'pag' && key !== 'abstract'? (
+                      <td key={index}>
+                        <strong>
+                         {isEditing ? (
+                          value
+                        ) : (
+                            value
+                          )}
+                        </strong>
+                      </td>
+                    ) : null
                   ))}
-                  <td>
-                    <button onClick={() => handleDelete(item.id)} className="iconButton"><img alt="Borrar" src="../img/eliminar.png" className="imgIconos"/></button>
-                  </td>
+                  
+                  {isEditing ? (
+                    <td>
+                      <button onClick={() => handleDelete(item.id)} className="iconButton">
+                        <img alt="Delete" src="../img/eliminar.png" className="imgIconos" />
+                      </button>
+                    </td>
+                  ) : (
+                    null
+                  )}
                 </tr>
               ))}
             </tbody>
           </table>
         )}
+
+      {isEditing ? ( 
         <div className="centered-container">
             <button onClick={toggleFormulario} className="iconButton"><img alt="Mas" src="../img/mas.png" className="imgIconos"/></button>
                 {mostrarFormulario && (
@@ -132,16 +155,21 @@ function FetchDate({url}) {
                         value={nuevoDato ? nuevoDato[item] : ""}
                       />
                 ))}
+        
                   <button type="submit" className="iconButton">
                     <img alt="Ready" src="../img/comprobado.png" className="imgIconos" />
                   </button>
                   </form>
                     )}
-        </div>
+          </div>
+        ) : (
+          null
+        )}
         <div className="CustomP">
             <CustomPagination totalPages={Math.ceil(data.length / itemsPerPage)} onPageChange={handlePageChange} /> 
           </div>
       </div>
+    
       );
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GetDate from "./funtion/GetDate";
 import Grid from "../components/grid";
-import "./styles/styles.css";
+import "./styles/styles_AC.css";
 import Row from 'react-bootstrap/Row';
 import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ function FetchGet({ url }) {
   const [error, setError] = useState(null);
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4; 
+  const itemsPerPage = 2; 
 
   useEffect(() => {
     const fetchGet = async (url) => {
@@ -53,7 +53,7 @@ function FetchGet({ url }) {
 
     return (
       <>
-      <div className="generalElement">
+      <div className="generalElemento">
       <Row>
         {naipesToDisplay.map((item) => {
           const id = item.id || "No contiene un id";
@@ -65,15 +65,15 @@ function FetchGet({ url }) {
             case '/article':
             case '/':
               return (
-                <Col key={id}>
+                <Col key={id} xs={12} sm={6} md={4} lg={3}>
                   <Link to={`/Page/${id}/${title}`} className='custom-link'>
                     <Grid  naipes={data} Src={img} Title={title} P={Institution} />
                   </Link>
                 </Col>
               );
-            case '/certificate':
+            case '/certificate':  
               return (
-                <Col key={id}>
+                <Col key={id} xs={12} sm={6} md={4} lg={3}>
                   <Link to={`/PageC/${id}/${title}`} className='custom-link'>
                     <Grid naipes={data} Src={img} Title={title} P={Institution} />
                   </Link>

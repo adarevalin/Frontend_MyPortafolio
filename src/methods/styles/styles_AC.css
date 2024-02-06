@@ -1,0 +1,13 @@
+.generalElemento {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+.CustomP {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }

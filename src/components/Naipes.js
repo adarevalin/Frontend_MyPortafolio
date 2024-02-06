@@ -1,14 +1,21 @@
 import Card from 'react-bootstrap/Card';
+import '../components/styles/stylesNaipes.css';
 
 function Naipes(props) {
   return (
-    <Card style={{ width: '16rem', marginTop: '5%'}}>
-      <Card.Img variant="top" src={props.Src} style={{height: '18rem'}}/>
+    <div className="card-container">
+    <Card>
+      <div className='ImagenCard'>
+      <Card.Img className='Img' variant="top" src={props.Src}/>
       <Card.Body>
-        <Card.Title>{props.Title}</Card.Title>
-        <Card.Text>{props.P}</Card.Text>
+        <div className='CardGeneral'>
+        <Card.Title className='Title'>{props.Title}</Card.Title>
+        <Card.Text className='CardText'>{props.P}</Card.Text>
+        </div>
       </Card.Body>
+      </div>
     </Card>
+    </div>
   );
 }
 

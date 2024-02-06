@@ -9,14 +9,16 @@ function NavBar() {
   return (
     <Navbar collapseOnSelect expand="xl" bg="dark" data-bs-theme="dark" className='fixed-top'>
       <Container >
-        <Navbar.Brand ><Link to={"/"} className='custom-link'>Mi Portafolio</Link></Navbar.Brand>
+        <Navbar.Brand ><Link to={"/"} className='custom-link'><span  translate="no" style={{ display: 'inline-block', textAlign: 'center' }}>
+      Port<span style={{ verticalAlign: 'middle', fontSize:'2rem', fontStyle: 'italic' }}>A</span>folio
+    </span></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link><Link to={"/"} className='custom-link'>Publicaciones</Link></Nav.Link>
             <Nav.Link><Link to={"/interesting"} className='custom-link'>Intereses</Link></Nav.Link>
             <NavDropdown title="Desplegable" id="collasible-nav-dropdown">
-              <NavDropdown.Item> <Link to={"/article"} className='custom-link'>Articulos</Link></NavDropdown.Item>
+              <NavDropdown.Item> <Link to={"/article"} className='custom-link'>Artículos</Link></NavDropdown.Item>
               <NavDropdown.Item> <Link to={"/certificate"} className='custom-link'>Certificados</Link></NavDropdown.Item>
             </NavDropdown>
           </Nav>

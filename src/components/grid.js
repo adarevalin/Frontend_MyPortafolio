@@ -1,6 +1,6 @@
 //import Container from 'react-bootstrap/Container';
 import Naipes from './Naipes';
-import '../components/styles/styleCurriculum.css'
+
 
 function Grid(props) {
   

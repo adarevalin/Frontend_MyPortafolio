@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ('./styles/styles.css')
+import ('./styles/Notice.css')
 
 
 async function GetNotice() {
@@ -68,12 +68,12 @@ return (
               </td>
               <td>{new Date(item.published_at).toLocaleDateString()}</td>
               <td>{item.author}</td>
-              <td>{item.description}</td>
+              <td class="descripcion">{item.description}</td>
             </tr>
           ))}
         </tbody>
       </table>
-    </div>
+      </div>
     </>
   );
 }

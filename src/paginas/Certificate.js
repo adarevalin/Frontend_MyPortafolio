@@ -1,6 +1,5 @@
 import React from "react";
 import FetchGet from "../methods/FetchGet";
-import '../style.css';
 import { Container} from 'react-bootstrap';
 
 function Certificate () {

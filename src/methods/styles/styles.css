@@ -26,7 +26,17 @@
   .styled-table th {
     background-color: #f2f2f2; /* Color de fondo para las celdas de encabezado */
   }
-
+  
+  .table-container {
+    margin: 20px auto; /* Centra la tabla y agrega margen */
+    width: 80%; /* Establece el ancho máximo del contenedor */
+    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
+  }
+  .style-tabla {
+    width: 100%; /* Establece el ancho de la tabla al 100% del contenedor */
+    border-collapse: collapse; /* Combina los bordes de las celdas */
+  }
+  
   .iconButton {
     display: inline-block;
     width: 5rem;
@@ -64,61 +74,6 @@ form input {
   width: auto;
 }
 
-.CustomP {
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.generalElement {
-  display: flex;
-  padding-top: 80px;
-  padding-bottom: 20px;
-}
-
-.noticias-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.noticias-table th, .noticias-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-.noticias-table th {
-  background-color: #f2f2f2;
-}
-
-.noticias-table a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-.generalNotice {
-  display: flex;
-  flex-wrap:wrap;
-  justify-content: center;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  width: 70%;
-  margin: auto;
-}
-.generalNotice table thead tr th {
-  font-size: 1.2rem;
-  background-color: #00000088;
-}
-
-.generalNotice table tbody {
-  background-color: #0000001A;
-}
-.generalNotice h1 {
-  max-width: 100%;
-  font-size: 2.5rem;
-}
 
 
 .joke-container {

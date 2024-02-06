@@ -1,0 +1,25 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    height: auto;  
+}
+
+.ImagenCard {
+    height: auto;
+}
+
+.ImagenCard .Img {
+   width: 100%;
+}
+
+.CardGeneral .Title{
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.CardText {
+    font-size: 1rem;
+    text-align: center;
+}
+

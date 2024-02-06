@@ -50,7 +50,7 @@ function Slider({ url }) {
             <h3>{item.nombre}</h3>
             {/* Utiliza el componente TruncateText para truncar el texto */}
             <div>
-              <TruncateText text={item.texto} maxLength={50} />
+              <TruncateText text={item.texto} maxLength={100} />
             </div>
             <a href={item.pag} target="_blank" rel="noopener noreferrer" className='RefCarrusel'>
               Ingrese aquí

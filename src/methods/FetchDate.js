@@ -106,8 +106,9 @@ function FetchDate({ url, isEditing, onSave, onInputChange, editedData }) {
       return (
       <div className="App">
         {data && (
+          <div className="table-container">
           <table className="styled-table">
-            <tbody>
+            <tbody className="style-tabla">
               {naipesToDisplay.map((item, index) => (
                 <tr key={index}>
                   {/* Renderizar datos según si estamos en modo de edición o no */}
@@ -138,8 +139,9 @@ function FetchDate({ url, isEditing, onSave, onInputChange, editedData }) {
               ))}
             </tbody>
           </table>
+          </div>
         )}
-
+    
       {isEditing ? ( 
         <div className="centered-container">
             <button onClick={toggleFormulario} className="iconButton"><img alt="Mas" src="../img/mas.png" className="imgIconos"/></button>

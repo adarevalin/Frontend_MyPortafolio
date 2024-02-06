@@ -1,0 +1,67 @@
+.generalNotice {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 10%;
+    overflow-x: auto;
+  }
+
+  .generalNotice h1 {
+    font-size: 2.5em;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #030303;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  /* Efecto de sombra */
+  .generalNotice h1::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background-color: #000000;
+    transform: translateX(-50%);
+  }
+
+  
+  .noticias-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
+  }
+
+  .noticias-table th, .noticias-table td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Ajusta el espacio interior para hacerlo más espacioso */
+    text-align: left;
+    white-space: normal; /* Permite que el texto se envuelva */
+    overflow: auto; /* Mantiene el desplazamiento si el contenido es muy largo */
+  }
+
+  .noticias-table th {
+    background-color: #aaa4a4;
+  }
+  .noticias-table img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  /* Aplica estilos específicos a las celdas de descripción */
+.noticias-table .descripcion {
+    overflow: auto; /* Oculta el contenido que desborda */
+    white-space: nowrap; /* Evita que la descripción se envuelva */
+  }
+
+  @media only screen and (max-width: 600px) {
+    .noticias-table img {
+      max-width: 80px;
+      max-height: 80px;
+    }
+  }

@@ -19,7 +19,7 @@ function Login({ onSuccess }) {
 
   const handleLoginAndEdit = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/portafolio/login", {
+      const response = await fetch("https://backend-portafolio-abnh.onrender.com/api/portafolio/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

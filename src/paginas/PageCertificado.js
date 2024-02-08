@@ -9,7 +9,7 @@ function PageRedaccion () {
     return(
         <>
         <Container>
-            <EstructRedaccion Id={id} url={"http://localhost:8000/api/portafolio/certificados"}/>
+            <EstructRedaccion Id={id} url={"https://backend-portafolio-abnh.onrender.com/api/portafolio/certificados"}/>
         </Container>
         </>
     )

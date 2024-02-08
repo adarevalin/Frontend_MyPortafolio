@@ -7,19 +7,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
+    text-justify: inter-word; /* Ajuste de texto justificado */
+    padding: 15px; /* Añadir padding */
+}
 
+.principal .container .col .row a .LinkAmpliar {
+    text-align: center;
 }
 .principal h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 .principal h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .principal p {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .principal img {
     width: 70%;

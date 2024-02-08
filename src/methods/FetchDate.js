@@ -129,7 +129,7 @@ function FetchDate({ url, isEditing, onSave, onInputChange, editedData }) {
                   {isEditing ? (
                     <td>
                       <button onClick={() => handleDelete(item.id)} className="iconButton">
-                        <img alt="Delete" src="../img/eliminar.png" className="imgIconos" />
+                        <img alt="Delete" src="https://i.imgur.com/BhrXNpH.png" className="imgIconos" />
                       </button>
                     </td>
                   ) : (
@@ -144,7 +144,7 @@ function FetchDate({ url, isEditing, onSave, onInputChange, editedData }) {
     
       {isEditing ? ( 
         <div className="centered-container">
-            <button onClick={toggleFormulario} className="iconButton"><img alt="Mas" src="../img/mas.png" className="imgIconos"/></button>
+            <button onClick={toggleFormulario} className="iconButton"><img alt="Mas" src="https://i.imgur.com/KkcnjR7.png" className="imgIconos"/></button>
                 {mostrarFormulario && (
                   <form onSubmit={handleFormSubmit}>
                     {((data && data.length > 0 && Object.keys(data[0])) || []).map((item) => (
@@ -159,7 +159,7 @@ function FetchDate({ url, isEditing, onSave, onInputChange, editedData }) {
                 ))}
         
                   <button type="submit" className="iconButton">
-                    <img alt="Ready" src="../img/comprobado.png" className="imgIconos" />
+                    <img alt="Ready" src="https://i.imgur.com/wkmbDPS.png" className="imgIconos" />
                   </button>
                   </form>
                     )}

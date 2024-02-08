@@ -15,7 +15,7 @@ function FetchGet({ url }) {
   const [error, setError] = useState(null);
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 2; 
+  const itemsPerPage = 4; 
 
   useEffect(() => {
     const fetchGet = async (url) => {
@@ -65,7 +65,7 @@ function FetchGet({ url }) {
             case '/article':
             case '/':
               return (
-                <Col key={id} xs={12} sm={6} md={4} lg={3}>
+                <Col key={id} xs={12} sm={6} md={4} >
                   <Link to={`/Page/${id}/${title}`} className='custom-link'>
                     <Grid  naipes={data} Src={img} Title={title} P={Institution} />
                   </Link>
@@ -73,7 +73,7 @@ function FetchGet({ url }) {
               );
             case '/certificate':  
               return (
-                <Col key={id} xs={12} sm={6} md={4} lg={3}>
+                <Col key={id} xs={12} sm={6} md={4}>
                   <Link to={`/PageC/${id}/${title}`} className='custom-link'>
                     <Grid naipes={data} Src={img} Title={title} P={Institution} />
                   </Link>

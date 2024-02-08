@@ -46,20 +46,28 @@ function FetchGetEx({ Id, url }) {
             <Row>
                 <img  alt="imagen" src={filteredData[0]?.img || ''} />
             </Row>
+            {filteredData[0]?.abstract && (
+              <Row>
+                <p>{filteredData[0]?.abstract}</p>
+              </Row>
+            )}
+            {filteredData[0]?.introduccion && (
+              <Row>
+                <p>{filteredData[0]?.introduccion}</p>
+              </Row>
+            )}
+            {filteredData[0]?.nudo && (
+              <Row>
+                <p>{filteredData[0]?.nudo}</p>
+              </Row>
+            )}
+            {filteredData[0]?.desenlace && (
+              <Row>
+                <p>{filteredData[0]?.desenlace}</p>
+              </Row>
+            )}
             <Row>
-              <p>{filteredData[0]?.abstract || ''}</p>
-            </Row>
-            <Row>
-              <p>{filteredData[0]?.introduccion || ''}</p>
-            </Row>
-            <Row>
-              <p>{filteredData[0]?.nudo || ''}</p>
-            </Row>
-            <Row>
-              <p>{filteredData[0]?.desenlace || ''}</p>
-            </Row>
-            <Row>
-              <a href={filteredData[0]?.pag} target="_blank" rel="noopener noreferrer"><p>Ampliar detalles</p></a>
+              <a href={filteredData[0]?.pag} target="_blank" rel="noopener noreferrer"><p className="LinkAmpliar">Ampliar detalles</p></a>
             </Row>
           </Col>
         </Container>

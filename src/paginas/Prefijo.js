@@ -8,7 +8,7 @@ function Prefijo () {
 
             <Container className="general">
                 <div className="DivImagen">
-                    <Image xs={6} md={4} alt="Mi foto" src="../img/yo.jpg" className="imgYo" roundedCircle/>
+                    <Image xs={6} md={4} alt="Mi foto" src="https://i.imgur.com/wLOHVxd.jpg" className="imgYo" roundedCircle/>
                 </div>
                 <div className="DivTitulo">
                     <h1 className="Titulo">Andrés David Arévalo Rosero</h1>

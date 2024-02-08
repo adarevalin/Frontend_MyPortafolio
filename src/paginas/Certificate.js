@@ -6,7 +6,7 @@ function Certificate () {
     return(
         <>
         <Container>
-            <FetchGet url="http://localhost:8000/api/portafolio/certificados"/>
+            <FetchGet url="https://backend-portafolio-abnh.onrender.com/api/portafolio/certificados"/>
         </Container>
         </>
     )

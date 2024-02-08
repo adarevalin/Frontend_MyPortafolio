@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 0 1% 1% 1%;
+    padding: 5% 1% 1% 1%;
     opacity: 1;
-    background-color: rgb(62, 78, 109);
+    background: linear-gradient(black, white);
 }
 
 .Cita .Cite {

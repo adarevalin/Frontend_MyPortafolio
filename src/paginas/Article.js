@@ -9,7 +9,7 @@ function Article () {
     return (
         <> 
         <Container>    
-                <FetchGet url="http://localhost:8000/api/portafolio/articulo"/>  
+                <FetchGet url="https://backend-portafolio-abnh.onrender.com/api/portafolio/articulo"/>  
         </Container>
         </>
     );

@@ -51,7 +51,7 @@ function Curriculum () {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header><span className="items_prin">Datos personales</span></Accordion.Header>
                     <Accordion.Body>
-                        <FetchDate url="http://localhost:8000/api/portafolio/date/"
+                        <FetchDate url="https://backend-portafolio-abnh.onrender.com/api/portafolio/date/"
                                    isEditing={isEditing}
                                    onEdit={handleEdit}
                                    onSave={handleSave}
@@ -63,7 +63,7 @@ function Curriculum () {
                 <Accordion.Item eventKey="1">
                     <Accordion.Header><span className="items_prin">Educación Profesional</span></Accordion.Header>
                     <Accordion.Body>
-                        <FetchDate url="http://localhost:8000/api/portafolio/studios/"
+                        <FetchDate url="https://backend-portafolio-abnh.onrender.com/api/portafolio/studios/"
                                    isEditing={isEditing}
                                    onEdit={handleEdit}
                                    onSave={handleSave}
@@ -74,7 +74,7 @@ function Curriculum () {
                 <Accordion.Item eventKey="2">
                     <Accordion.Header><span className="items_prin">Formación Complementaria</span></Accordion.Header>
                     <Accordion.Body>
-                        <FetchDate url="http://localhost:8000/api/portafolio/certificados/"
+                        <FetchDate url="https://backend-portafolio-abnh.onrender.com/api/portafolio/certificados/"
                                     isEditing={isEditing}
                                     onEdit={handleEdit}
                                     onSave={handleSave}
@@ -85,7 +85,7 @@ function Curriculum () {
                 <Accordion.Item eventKey="3">
                     <Accordion.Header><span className="items_prin">Participación en eventos</span></Accordion.Header>
                     <Accordion.Body>
-                    <FetchDate url="http://localhost:8000/api/portafolio/eventos/"
+                    <FetchDate url="https://backend-portafolio-abnh.onrender.com/api/portafolio/eventos/"
                                isEditing={isEditing}
                                onEdit={handleEdit}
                                onSave={handleSave}
@@ -96,7 +96,7 @@ function Curriculum () {
                 <Accordion.Item eventKey="4">
                     <Accordion.Header><span className="items_prin">Proyectos Profesionales</span></Accordion.Header>
                     <Accordion.Body>
-                        <FetchDate url="http://localhost:8000/api/portafolio/articulo/"
+                        <FetchDate url="https://backend-portafolio-abnh.onrender.com/api/portafolio/articulo/"
                                    isEditing={isEditing}
                                    onEdit={handleEdit}
                                    onSave={handleSave}
@@ -115,7 +115,7 @@ function Curriculum () {
                             <img alt="Editar" src="../img/verificado.png" className="imgEdit" />
                         </button>
                         <button onClick={() => setIsEditing(false)} className="iconEdit">
-                            <img alt="Editar" src="../img/cancelar.png" className="imgEdit" />
+                            <img alt="Editar" src="https://i.imgur.com/btvSy5F.png" className="imgEdit" />
                         </button>
                     </>
                 ) : (
@@ -123,7 +123,7 @@ function Curriculum () {
                         {isLoggedIn ? (
                         <>
                             <button onClick={handleEdit} className="iconEdit">
-                            <img alt="Editar" src="../img/boligrafo.png" className="imgEdit" />
+                            <img alt="Editar" src="https://i.imgur.com/kTtX8ex.png" className="imgEdit" />
                             </button>
                         </>
                         ) : (

@@ -4,7 +4,7 @@ import ('./styles/styles.css')
 
 async function GetJoker() {
     try {
-      const respuesta = await fetch("http://localhost:8000/api/portafolio/chistes");
+      const respuesta = await fetch("https://backend-portafolio-abnh.onrender.com/api/portafolio/chistes");
       const datos = await respuesta.json();
       if (respuesta.ok) {
         console.log('Todo bien Joker');

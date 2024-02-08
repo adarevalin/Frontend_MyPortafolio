@@ -2,14 +2,28 @@
     background: rgb(0, 0, 0); /* Fondo semi-transparente, ajusta según tus necesidades */
     padding-bottom: 40px; /* Espaciado interno, ajusta según tus necesidades */
 }
-.ImagenCarrusel {
-    padding-top: 4%;
-    height: 100vh;
-}
 
+.carousel-inner .CarouselItem {
+    background-color: black;
+  }
+
+.carousel-inner .ImagenCarrusel {
+    padding-top: 5%;
+    display: block;
+    margin: auto;
+    height: 100vh;
+
+  }
+
+.ContenedorImagen {
+    text-align: center; /* Centra horizontalmente la imagen */
+    background-color: black; /* Establece el fondo negro */
+  }
 .carousel-caption h3 {
     color: white;
-    font-size: 5rem;
+    font-size: 3.5em;
+    line-height: 1.2;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .carousel-caption p {

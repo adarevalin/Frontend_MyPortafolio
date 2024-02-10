@@ -21,23 +21,25 @@ function FetchDate({ url, isEditing}) {
 
     // Utiliza el hook useEffect para realizar operaciones asíncronas cuando el componente se monta o la URL cambia.
     useEffect(() => {
+          
           fetchRef.current = async () => {
           try {
             // Realiza una solicitud para obtener datos utilizando la función GetDate.
-            const response = await GetDate(url);
-            const sortedData = response.sort((a, b) => a.id - b.id);
-            // Actualiza el estado 'data' con los datos obtenidos.
-            setData(sortedData);
-          } catch (error) {
-            // Actualiza el estado 'error' en caso de un error durante la solicitud.
-            setError(error);
-            return <div>Error: {error.message}</div>;
-          } finally {
-            // Establece isLoading en false después de completar la solicitud.
-            setIsLoading(false);
-            return <div>Loading...</div>;
-          }
-        };
+                const response = await GetDate(url);
+                const sortedData = response.sort((a, b) => a.id - b.id);
+                // Actualiza el estado 'data' con los datos obtenidos.
+                setData(sortedData);
+              } catch (error) {
+                // Actualiza el estado 'error' en caso de un error durante la solicitud.
+                setError(error);
+                return <div>Error: {error.message}</div>;
+              } finally {
+                // Establece isLoading en false después de completar la solicitud.
+                setIsLoading(false);
+                return <div>Loading...</div>;
+              }
+          
+            };
         
         // Llama a la función fetchData.
         fetchRef.current();
@@ -111,10 +113,9 @@ function FetchDate({ url, isEditing}) {
         return <div className="App"><h1>Error al obtener datos: {error.message}</h1></div>;
       }
       
-      // Calcula el índice de inicio y fin para mostrar una cierta cantidad de ítems por página.
-      const startIndex = (ElementPage - 1) * itemsPerPage;
-      const endIndex = startIndex + itemsPerPage;
-      const naipesToDisplay = data.slice(startIndex, endIndex);
+        const startIndex = (ElementPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const naipesToDisplay = data.slice(startIndex, endIndex);
 
       return (
       <div className="App">
@@ -184,7 +185,6 @@ function FetchDate({ url, isEditing}) {
             <CustomPagination totalPages={Math.ceil(data.length / itemsPerPage)} onPageChange={handlePageChange} /> 
           </div>
       </div>
-    
       );
 }
 

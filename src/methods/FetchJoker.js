@@ -5,53 +5,54 @@ import ('./styles/styles.css')
 async function GetJoker() {
     try {
       const respuesta = await fetch("https://backend-portafolio-abnh.onrender.com/api/portafolio/chistes");
-      const datos = await respuesta.json();
-      if (respuesta.ok) {
-        console.log('Todo bien Joker');
-      } else {
-        console.log('Respuesta de red OK pero respuesta de HTTP no OK');
-      }
-      return datos
-      
+      return await respuesta.json();
+
     } catch (error) {
       console.error('Error al obtener datos:', error);
     }
-    
   }
 
-
-function FetchJoker() {
+ function FetchJoker() {
+  
   const [Joker, setJoker] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const datos = await GetJoker();
-
-        setJoker(datos); // Asegúrate de ajustar esto según la estructura real de tus datos
-
+        
+        setJoker(await GetJoker()); // Asegúrate de ajustar esto según la estructura real de tus datos
+        
       } catch (error) {
         console.error('Error al obtener datos en useEffect:', error);
       }
     }
 
     fetchData()
-
+    
     return () => {
       setJoker([])
     }
   }, []);
  
+  // Si Joker es null, muestra un mensaje de carga
+  if (!Joker) {
+    return <div>Loading...</div>;
+  }
+  
+
 return (
     <>
+    {Joker && (
         <div key={Joker.id} className="joke-container">
           <h2>{Joker.category}</h2>
           <p>{Joker.type}</p>
           <p>{Joker.setup}</p>
           <p>{Joker.delivery}</p>
         </div>
+    )}
     </>
+    
   );
-}
+ }
 
 export default FetchJoker;

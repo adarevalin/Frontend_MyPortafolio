@@ -6,11 +6,7 @@ async function GetNotice() {
     try {
       const respuesta = await fetch("https://backend-portafolio-abnh.onrender.com/api/portafolio/notice");
       const datos = await respuesta.json();
-      if (respuesta.ok) {
-        console.log('Todo bien');
-      } else {
-        console.log('Respuesta de red OK pero respuesta de HTTP no OK');
-      }
+
       return datos
       
     } catch (error) {

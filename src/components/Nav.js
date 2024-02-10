@@ -26,9 +26,9 @@ function NavBar() {
             <div className="nav-item">
               <Link to={"/"} className='custom-Nav'>Publicaciones</Link>
             </div>
-            <div className="nav-item">
+            {/*<div className="nav-item">
               <Link to={"/interesting"} className='custom-Nav'>Intereses</Link>
-            </div>
+            </div>*/}
 
             <NavDropdown title="Desplegable" className='Desplegable'>
               <div className="nav-item">
@@ -41,9 +41,9 @@ function NavBar() {
           </Nav>  
 
           <Nav> {/* Alineación horizontal centrada */}
-            <div className="nav-item">
+            {/*<div className="nav-item">
               <Link to={"/curriculum"} className='custom-Nav'>Curriculum</Link>
-            </div>
+          </div>*/}
             <div className="nav-item">
               <Link to={'/prefijo'} className='custom-Nav'>Acerca de mí</Link>
             </div>

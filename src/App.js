@@ -4,10 +4,11 @@ import { Fragment } from 'react';
 import NavBar from './components/Nav';
 import Footer from './components/Footer';
 import Home from './paginas/Home';
-import Interesting from './paginas/Interesting';
+
 import Article from './paginas/Article';
 import Certificate from './paginas/Certificate';
-import Curriculum from './paginas/Curriculum';
+//import Curriculum from './paginas/Curriculum';
+//import Interesting from './paginas/Interesting';
 import Prefijo from './paginas/Prefijo';
 import PageRedaccion from './paginas/PageRedaccion';
 import PageCertificado from './paginas/PageCertificado';
@@ -28,10 +29,10 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/interesting" element={<Interesting />} />
+          {/*<Route path="/interesting" element={<Interesting />} />*/}
           <Route path="/article/" element={<Article/>} />
           <Route path='/certificate' element={<Certificate/>} />
-          <Route path='/curriculum' element={<Curriculum/>} />
+          {/*<Route path='/curriculum' element={<Curriculum/>} />*/}
           <Route path='/prefijo' element={<Prefijo/>} />
           <Route path='/Page/:id/:title' element={<PageRedaccion />} />
           <Route path='/PageC/:id/:title' element={<PageCertificado />} />

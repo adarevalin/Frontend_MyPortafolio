@@ -1,11 +1,11 @@
-import FetchNotice from '../methods/FetchNotice';
+// import FetchNotice from '../methods/FetchNotice';
 
-function Interesting () {
-    return (
-        <>
-            <FetchNotice/>
-        </>
-    );
-}
+// function Interesting () {
+//     return (
+//         <>
+//             <FetchNotice/>
+//         </>
+//     );
+// }
 
-export default Interesting;
+// export default Interesting;

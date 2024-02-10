@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Fragment } from 'react';
-import io from 'socket.io-client';
 
 import NavBar from './components/Nav';
 import Footer from './components/Footer';
@@ -14,37 +13,15 @@ import Prefijo from './paginas/Prefijo';
 import PageRedaccion from './paginas/PageRedaccion';
 import PageCertificado from './paginas/PageCertificado';
 
-import './style.css';
+import './style.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
     // Elimina el token al cargar la página
     localStorage.removeItem("token");
-
-    // Configurar WebSocket
-    const socket = io('wss://frontend-myportafolio.onrender.com:10000/ws');
-
-    // Evento que se ejecuta cuando se establece la conexión con el servidor WebSocket
-    socket.on('connect', () => {
-      console.log('Conexión establecida con el servidor WebSocket');
-    });
-
-    // Evento que se ejecuta cuando se recibe un mensaje del servidor WebSocket
-    socket.on('message', (data) => {
-      console.log('Mensaje recibido del servidor WebSocket:', data);
-    });
-
-    // Manejar la desconexión del servidor WebSocket
-    socket.on('disconnect', () => {
-      console.log('Desconectado del servidor WebSocket');
-    });
-
-    // Cerrar la conexión al desmontar el componente o salir de la página
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
+  }, []); // El segundo parámetro del useEffect asegura que esto solo se ejecute una vez al cargar la página
 
   return (
     <Router>

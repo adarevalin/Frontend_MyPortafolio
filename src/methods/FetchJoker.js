@@ -35,7 +35,11 @@ function FetchJoker() {
       }
     }
 
-    fetchData();
+    fetchData()
+
+    return () => {
+      setJoker([])
+    }
   }, []);
  
 return (

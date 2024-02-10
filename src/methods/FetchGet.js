@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import GetDate from "./funtion/GetDate";
 import Grid from "../components/grid";
 import "./styles/styles_AC.css";
@@ -16,9 +16,10 @@ function FetchGet({ url }) {
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4; 
+  const fetchRef = useRef(null);
 
   useEffect(() => {
-    const fetchGet = async (url) => {
+    const fetchData = async () => {
       try {
         const response = await GetDate(url);
         setData(response);
@@ -29,7 +30,18 @@ function FetchGet({ url }) {
       }
     };
 
-    fetchGet(url);
+    if (!fetchRef.current) {
+      fetchRef.current = fetchData;
+      fetchRef.current();
+    }
+
+    return () => {
+      setData(null)
+      setCurrentPage(1)
+      if (fetchRef.current) {
+        fetchRef.current = null;
+      }
+    }
   }, [url]);
 
   const handlePageChange = (newPage) => {

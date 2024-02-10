@@ -15,14 +15,21 @@ function Slider({ url }) {
       try {
         const response = await GetDate(url);
         setData(response);
+        setIsLoading(false);
       } catch (error) {
         setError(error);
-      } finally {
         setIsLoading(false);
       }
     };
 
-    fetchData();
+    fetchData(); 
+
+    return () => {
+      // Limpiar estado cuando el componente se desmonte
+      setData([]);
+      setIsLoading(true);
+      setError(null);
+    };
   }, [url]);
 
   if (isLoading) {
@@ -41,13 +48,11 @@ function Slider({ url }) {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {data.map((item) => (
         <Carousel.Item key={item.id}>
-          <div className="ContenedorImagen">
-            <img
-              className="ImagenCarrusel"
-              src={item.img}
-              alt={item.nombre}
-            />
-          </div>
+          <img
+            className="d-block w-100"
+            src={item.img}
+            alt={item.nombre}
+          />
           <Carousel.Caption>
             <h3>{item.nombre}</h3>
             {/* Utiliza el componente TruncateText para truncar el texto */}
@@ -65,5 +70,3 @@ function Slider({ url }) {
 }
 
 export default Slider;
-
-

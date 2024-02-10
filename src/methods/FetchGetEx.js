@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import GetDate from "./funtion/GetDate";
 import './styles/redaccion.css'
 import Row from 'react-bootstrap/Row';
@@ -9,9 +9,10 @@ function FetchGetEx({ Id, url }) {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const fetchRef = useRef(null);
 
   useEffect(() => {
-    const fetchGetEx = async (url) => {
+    fetchRef.current = async () => {
       try {
         const response = await GetDate(url);
         setData(response);
@@ -22,7 +23,15 @@ function FetchGetEx({ Id, url }) {
       }
     };
 
-    fetchGetEx(url);
+    fetchRef.current();
+
+    return () => {
+        setData(null);
+        setIsLoading(true)
+        if (fetchRef.current) {
+          fetchRef.current = null;
+        }
+    }
   }, [url]);
   
   

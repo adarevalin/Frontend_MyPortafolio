@@ -9,8 +9,7 @@ import '../methods/styles/stylesHome.css';
 function Home () {
     return (
         <>
-        <Slider url="https://backend-portafolio-abnh.onrender.com/api/portafolio/intereses/"/>
-        <Cite/>
+    
         <Container>
             <div className='Descripcion'>
                 <h1 className='text-center'>Nuestra Experiencia en Desarrollo de Software: Proyectos y Artículos</h1>

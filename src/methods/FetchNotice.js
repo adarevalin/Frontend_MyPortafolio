@@ -33,8 +33,10 @@ function FetchNotice() {
         console.error('Error al obtener datos en useEffect:', error);
       }
     }
-
+    
     fetchData();
+  
+
   }, []);
 
 return (

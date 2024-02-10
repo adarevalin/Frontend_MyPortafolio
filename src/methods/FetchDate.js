@@ -1,5 +1,5 @@
 // Importa los hooks y funciones necesarios desde las bibliotecas y archivos.
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import GetDate from "./funtion/GetDate";
 import "./styles/styles.css";
 import eliminarDato from "./funtion/DeleteDate";
@@ -8,7 +8,7 @@ import handleSubmit from "./funtion/handleSubmit";
 import CustomPagination from "../components/CustomPagination";
 
 // Define el componente funcional FetchDate y recibe una prop llamada 'url'.
-function FetchDate({ url, isEditing, onSave, onInputChange, editedData }) {
+function FetchDate({ url, isEditing}) {
     // Define los estados del componente utilizando el hook useState.
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -16,11 +16,12 @@ function FetchDate({ url, isEditing, onSave, onInputChange, editedData }) {
     const [nuevoDato, setNuevoDato] = useState(null);
     const [mostrarFormulario, setMostrarFormulario] = useState(false);
     const [ElementPage, setElementPage] = useState(1);
+    const fetchRef = useRef(null);
     const itemsPerPage = 3; 
 
     // Utiliza el hook useEffect para realizar operaciones asíncronas cuando el componente se monta o la URL cambia.
     useEffect(() => {
-        const fetchData = async () => {
+          fetchRef.current = async () => {
           try {
             // Realiza una solicitud para obtener datos utilizando la función GetDate.
             const response = await GetDate(url);
@@ -39,7 +40,19 @@ function FetchDate({ url, isEditing, onSave, onInputChange, editedData }) {
         };
         
         // Llama a la función fetchData.
-        fetchData();
+        fetchRef.current();
+
+        return () => {
+          setData(null)
+          setIsLoading([])
+          setNuevoDato(null)
+          setMostrarFormulario(false)
+          setElementPage(1)
+          if (fetchRef.current) {
+            fetchRef.current = null;
+          }
+        }
+
     }, [url]); // La dependencia 'url' asegura que la solicitud se realice cuando cambia la URL.
 
     // Maneja el cambio de página.

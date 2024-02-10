@@ -1,6 +1,6 @@
 import React from 'react';
-import Slider from '../components/Carrusel'
-import Cite from '../components/Cite'
+//import Slider from '../components/Carrusel'
+//import Cite from '../components/Cite'
 import FetchGet from '../methods/FetchGet';
 import { Container} from 'react-bootstrap';
 import '../methods/styles/stylesHome.css';

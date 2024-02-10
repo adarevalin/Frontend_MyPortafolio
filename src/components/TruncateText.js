@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./styles/carrusel.css"
 const TruncateText = ({ text, maxLength }) => {
   const [isTruncated, setIsTruncated] = useState(true);

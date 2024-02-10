@@ -1,4 +1,3 @@
-import React from 'react';
 import FetchNotice from '../methods/FetchNotice';
 
 function Interesting () {

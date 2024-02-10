@@ -1,5 +1,5 @@
 // En tu componente de React
-import React, { useState } from "react";
+import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap"; // O cualquier otro componente de modal que estés utilizando
 
 function Login({ onSuccess }) {

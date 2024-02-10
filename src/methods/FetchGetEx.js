@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import GetDate from "./funtion/GetDate";
 import './styles/redaccion.css'
 import Row from 'react-bootstrap/Row';

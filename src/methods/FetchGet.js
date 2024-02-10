@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import GetDate from "./funtion/GetDate";
 import Grid from "../components/grid";
 import "./styles/styles_AC.css";

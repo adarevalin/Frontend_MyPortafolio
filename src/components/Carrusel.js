@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import GetDate from '../methods/funtion/GetDate';
 import Carousel from 'react-bootstrap/Carousel';
 import TruncateText from './TruncateText'; // Importa el componente TruncateText

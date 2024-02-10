@@ -1,4 +1,3 @@
-import React from "react";
 import FetchGet from "../methods/FetchGet";
 import { Container} from 'react-bootstrap';
 

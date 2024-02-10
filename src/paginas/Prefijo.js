@@ -1,4 +1,3 @@
-import React from "react";
 import '../style.css';
 import { Container, Image } from 'react-bootstrap';
 

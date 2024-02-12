@@ -28,14 +28,15 @@ function App() {
       <Fragment>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           {/*<Route path="/interesting" element={<Interesting />} />*/}
           <Route path="/article/" element={<Article/>} />
           <Route path='/certificate' element={<Certificate/>} />
           {/*<Route path='/curriculum' element={<Curriculum/>} />*/}
-          <Route path='/prefijo' element={<Prefijo/>} />
+          <Route path='/' element={<Prefijo/>} />
           <Route path='/Page/:id/:title' element={<PageRedaccion />} />
           <Route path='/PageC/:id/:title' element={<PageCertificado />} />
+          
         </Routes>
         <Footer/>
       </Fragment>

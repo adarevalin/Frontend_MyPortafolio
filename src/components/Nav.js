@@ -10,7 +10,7 @@ function NavBar() {
     <Navbar collapseOnSelect expand="xl" className='fixed-top' variant="dark">
       <Container>
         <Navbar.Brand>
-          <Link to={"/"} className='custom-Nav'>
+          <Link to={"/home"} className='custom-Nav'>
             <span translate="no" style={{ display: 'inline-block', textAlign: 'center' }}>
               Port<span style={{ verticalAlign: 'middle', fontSize: '2rem', fontStyle: 'italic' }}>A</span>folio
             </span>
@@ -24,7 +24,7 @@ function NavBar() {
           
           <Nav>
             <div className="nav-item">
-              <Link to={"/"} className='custom-Nav'>Publicaciones</Link>
+              <Link to={"/home"} className='custom-Nav'>Publicaciones</Link>
             </div>
             {/*<div className="nav-item">
               <Link to={"/interesting"} className='custom-Nav'>Intereses</Link>
@@ -45,7 +45,7 @@ function NavBar() {
               <Link to={"/curriculum"} className='custom-Nav'>Curriculum</Link>
           </div>*/}
             <div className="nav-item">
-              <Link to={'/prefijo'} className='custom-Nav'>Acerca de mí</Link>
+              <Link to={'/'} className='custom-Nav'>Acerca de mí</Link>
             </div>
           </Nav>
         </Nav>

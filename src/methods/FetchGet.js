@@ -75,7 +75,7 @@ function FetchGet({ url }) {
           
           switch (Url) {
             case '/article':
-            case '/':
+            case '/home':
               return (
                 <Col key={id} xs={12} sm={6} md={4} >
                   <Link to={`/Page/${id}/${title}`} className='custom-link'>

@@ -48,11 +48,13 @@ function Slider({ url }) {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {data.map((item) => (
         <Carousel.Item key={item.id}>
-          <img
-            className="d-block w-100"
-            src={item.img}
-            alt={item.nombre}
-          />
+          <div className='ContenedorImagen'>
+            <img
+              className='ImagenCarrusel'
+              src={item.img}
+              alt={item.nombre}
+            />
+          </div>
           <Carousel.Caption>
             <h3>{item.nombre}</h3>
             {/* Utiliza el componente TruncateText para truncar el texto */}
